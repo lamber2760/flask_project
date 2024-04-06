@@ -1,28 +1,25 @@
 {% extends "navbar.html" %}
 {% block we %}
-<h5 style="text-align: center;">MY TODO</h5>
-<div style="  padding-left: 440px">
-   
-    <form action="/savethisdata" method="POST">
-        <div  class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">TODO</label>
-          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="enter your todo">
-          <!-- <div id="emailHelp" class="form-text" name="title" placeholder="enter your todo"></div> -->
-        </div>
-        <br>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">DESCRTIONS</label>
-          <input type="text" class="form-control"row="3" id="exampleInputPassword1" name="msg" placeholder="enter your des"></div>
-        </div>
-        <br>
-    </div>
-    <div style="text-align: center;">
-        <button  type="submit">DONE</button>
-     </div>
-        
-      </form>
-     
-
+<h1 style="text-align: center;font-size: 55px">MYFLASK</h1>
+<form style="padding: 60px  ;   padding-left: 423px;" action="/savethisdata" method="POST">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Todo title</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="enter todo title" name="title">
+  </div>
+  <br>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+    <textarea name="msg" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Enetr your Description mesage"
+    required></textarea>
+  </div>
+  <br>
+  <div style=" padding-right: 229px;">
+    <div style="text-align:center">
+      <button type="submit" class="btn btn-primary">Add Todo</button>
+  </div>
+  </div>
+ 
+</form>
 
 
 {% endblock we %}
